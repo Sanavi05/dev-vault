@@ -1,14 +1,9 @@
 fastapi
 uvicorn
 python-multipart
-sentence-transformers
 chromadb
-pytesseract
-pillow
 PyPDF2
 numpy
 pandas
-scikit-learn
-torch
-transformers
-pdf2image
+openai
+python-dotenv
