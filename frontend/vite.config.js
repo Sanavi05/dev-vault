@@ -8,7 +8,7 @@ export default defineConfig({
     proxy: {
       // Proxy /api calls to FastAPI backend during development
       '/api': {
-        target: 'http://localhost:8000',
+        target: 'https://dev-vault-2svs.onrender.com',
         changeOrigin: true,
       },
     },
