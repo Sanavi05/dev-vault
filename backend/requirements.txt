@@ -5,5 +5,5 @@ chromadb
 PyPDF2
 numpy
 pandas
-openai
 python-dotenv
+google-generativeai
