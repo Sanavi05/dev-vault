@@ -1,0 +1,47 @@
+# Python
+
+**pycache**/
+*.py[cod]
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.log
+.venv/
+venv/
+env/
+
+# Environment variables
+
+.env
+
+# Uploads
+
+backend/uploads/
+
+# Chroma DB
+
+backend/chroma_db/
+
+# Node
+
+node_modules/
+npm-debug.log*
+
+# Build folders
+
+dist/
+build/
+
+# Mac
+
+.DS_Store
+
+# IDE
+
+.vscode/
+.idea/
+
+# Misc
+
+*.zip

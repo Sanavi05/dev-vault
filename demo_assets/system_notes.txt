@@ -1,0 +1,15 @@
+## DevVault Architecture Decisions
+
+Vector DB: ChromaDB chosen over Pinecone for local-first approach.
+No network latency, no API costs, data stays on machine.
+
+Embedding model: all-MiniLM-L6-v2 (384 dim) - good balance of speed 
+vs quality for developer notes. Upgrade to all-mpnet-base-v2 for 
+better accuracy if retrieval quality suffers.
+
+Chunking strategy: paragraph-first with 64-char overlap. Sentence 
+splitter as fallback for long paragraphs. Overlap prevents losing 
+context at chunk boundaries.
+
+OCR pipeline: grayscale + sharpen + upscale before Tesseract. 
+PSM mode 6 (single text block) works best for terminal screenshots.

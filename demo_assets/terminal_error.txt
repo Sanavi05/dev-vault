@@ -1,0 +1,13 @@
+$ node server.js
+Server running on port 3000
+POST /api/auth/login 200 142ms
+POST /api/auth/refresh 401 12ms
+
+JsonWebTokenError: invalid signature
+    at /app/middleware/auth.js:47:15
+    at Layer.handle_request
+
+Root cause: JWT_SECRET mismatch between token issuer (auth-service) 
+and validator (api-gateway). The auth-service uses JWT_SECRET from 
+.env.production but api-gateway still reads from .env.local after 
+the March deploy. Fix: sync JWT_SECRET across both services and redeploy.
