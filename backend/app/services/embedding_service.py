@@ -16,7 +16,7 @@ def generate_embedding(text: str) -> list[float]:
     """
 
     response = genai.embed_content(
-        model="models/embedding-001",
+        model="models/gemini-embedding-2",
         content=text,
         task_type="retrieval_document"
     )
@@ -44,7 +44,7 @@ def embed_query(query: str) -> list[float]:
 
 
     response = genai.embed_content(
-        model="models/embedding-001",
+        model="models/gemini-embedding-2",
         content=query,
         task_type="retrieval_query"
     )
